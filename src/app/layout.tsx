@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.scss'
 
+import { Header } from '#_ui/layout'
+import { NavBar } from './_ui/layout/nav'
+
 const firaCode = localFont({
   src: './_ui/fonts/FiraCode-VF.woff2',
   variable: '--font-fira-code',
@@ -20,7 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${firaCode.variable} antialiased`}>{children}</body>
+      <body className={`${firaCode.variable} antialiased`}>
+        <Header />
+        <NavBar />
+        <div className="border-t"></div>
+        <div className="mx-4">{children}</div>
+      </body>
     </html>
   )
 }

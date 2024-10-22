@@ -1,0 +1,82 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  width: 100%;
+  max-width: calc(100vw - 2rem - var(--filter-width, 120px));
+
+  @media (max-width: 768px) {
+    max-width: calc(100vw - 1.5rem - var(--filter-width, 100px));
+  }
+
+  @media (max-width: 640px) {
+    max-width: calc(100vw - 1rem - var(--filter-width, 80px));
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.overlay-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.overlay-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+:root {
+  --filter-width: 120px;
+
+  @media (max-width: 768px) {
+    --filter-width: 100px;
+  }
+
+  @media (max-width: 640px) {
+    --filter-width: 80px;
+  }
+}

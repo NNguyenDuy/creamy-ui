@@ -4,6 +4,9 @@
 
 body {
   font-family: var(--font-fira-code), monospace;
+  cursor: default;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 @layer utilities {
