@@ -1,6 +1,7 @@
 'use client'
 
 import { CardVideo } from '@/shared/features/card-video'
+import { Donut3D } from '@/shared/features/components/donut-3d'
 import { FallingText } from '@/shared/features/falling-text'
 import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
@@ -16,8 +17,8 @@ export const Header = () => {
 
   return (
     <section className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 justify-between items-end m-4 gap-4">
-      <div className="flex max-w-[350px] flex-col items-start gap-6 py-16">
-        <div className="flex flex-col">
+      <div className="flex max-w-[350px] flex-col items-start gap-6 py-16 relative">
+        <div className="flex flex-col ">
           <h1 className="text-2xl font-medium leading-tight text-t-gray">
             Creamy
           </h1>
@@ -42,6 +43,7 @@ export const Header = () => {
             }
           />
         </div>
+        <Donut3D />
       </div>
       <div className="col-span-1 xl:col-span-2">
         <CardVideo url="https://cdn.godly.website/videos/640/40dd5971-e408-42f3-9fb1-50da0571356d.mp4" />

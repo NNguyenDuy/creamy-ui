@@ -2,6 +2,7 @@ import { Slider } from '@/shared/features/slider'
 import Link from 'next/link'
 import { Icons } from './_ui/icons'
 import { ScrollText } from '@/shared/features/scroll-text'
+import { CardVideo } from '@/shared/features/card-video'
 
 const elements = [
   {
@@ -92,7 +93,7 @@ export default function Home() {
         <div className="absolute bottom-24 right-10 translate-y-1/2">
           <ScrollText
             text="The Creamy"
-            className="text-5xl md:text-7xl xl:text-9xl text-gray-50"
+            className="text-5xl md:text-7xl xl:text-9xl text-slate-100 opacity-50 z-50"
           />
         </div>
         <div
@@ -117,7 +118,21 @@ export default function Home() {
           className="flex gap-2 items-center h-16"
         />
       </div>
-      <section className="h-screen">test</section>
+      <section className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-20">
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+        <CardVideo />
+      </section>
     </div>
   )
 }

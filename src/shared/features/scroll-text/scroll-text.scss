@@ -1,6 +1,7 @@
 .scroll-text {
   animation: text-scroll;
   animation-timeline: view();
+  will-change: transform;
 }
 
 @keyframes text-scroll {
